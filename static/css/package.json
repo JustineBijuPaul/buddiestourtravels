@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  },
+  "name": "css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

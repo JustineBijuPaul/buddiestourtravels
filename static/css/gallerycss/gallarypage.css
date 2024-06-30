@@ -1,0 +1,473 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  overflow-x: hidden;
+}
+
+iframe {
+  overflow-clip-margin: content-box !important;
+  overflow: clip !important;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+}
+
+:root {
+  --card_width: 246px;
+  --row_increment: 10px;
+  --card_border_radius: 16px;
+  --card_small: 21;
+  --card_medium: 42;
+  --card_large: 48;
+}
+
+.brand {
+  width: 100%;
+  background-color: beige;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.brand .logo {
+  width: 8%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.brand .title {
+  width: 31%;
+  margin-bottom: auto;
+  margin-top: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand .title h1 {
+  background: linear-gradient(to right, #ff4502, #ff0032, #c0008f, #6c00c0);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  overflow: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .card-img-top {
+    height: 19vw;
+  }
+
+  .frame .container {
+    width: 100%;
+    position: absolute;
+    z-index: 9999999999999;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .middle-content {
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+  }
+
+  .arrow-box img {
+    width: 100px;
+    height: 40px;
+  }
+
+  .arrow-box {
+    width: 50px;
+    height: 40px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .card .info h5 {
+    margin: 0;
+    font-size: 14px;
+    color: #FFFFFF;
+  }
+
+  .card .info p {
+    margin: 5px 0 0;
+    font-size: 11px;
+  }
+
+  .gallery {
+    width: 100%;
+    height: 50%;
+    display: block;
+    background-color: #333333;
+    padding: 100px 0;
+  }
+
+  .bth {
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card-img-top {
+    height: 16vw;
+  }
+
+  .frame .container {
+    width: 100%;
+    position: absolute;
+    z-index: 9999999999999;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+  }
+
+  .card {
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .gallery {
+    width: 100%;
+    display: block;
+    background-color: #333333;
+    padding: 100px 0;
+  }
+
+  .bth {
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card-img-top {
+    height: 11vw;
+  }
+
+  .frame .container {
+    width: 100%;
+    position: absolute;
+    z-index: 9999999999999;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+  }
+
+  .card {
+    width: 100%;
+    height: 90%;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card-img-top {
+    height: 11vw;
+  }
+
+  .frame .container {
+    width: 100%;
+    position: absolute;
+    z-index: 9999999999999;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+      ". . ."
+      ". . ."
+      ". . .";
+  }
+
+  .card {
+    width: 100%;
+    height: 98%;
+    margin: 10px;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+}
+
+.gallery {
+  width: 100%;
+  display: block;
+  background-color: #333333;
+  padding: 100px 0;
+}
+
+.gallery .gallery-filter {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery .gallery-filter .filter-item {
+  font-size: 17px;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: beige;
+  border: 2px solid beige;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 8px 20px 8px 20px;
+  line-height: 1.2;
+  transition: all 0.3s ease;
+}
+
+.gallery .gallery-filter .filter-item:hover {
+  background-color: #7a64d2;
+}
+
+.gallery .gallery-filter .filter-item.active {
+  margin: 0%;
+}
+
+.gallery .gallery-filter .filter-item.active:hover {
+  background-color: #0285ff;
+}
+
+.gallery .gallery-item {
+  text-align: center;
+}
+
+.gallery .gallery-item-inner img {
+  width: 100%;
+}
+
+.gallery .gallery-item.show {
+  animation: fadeIn 0.5s ease;
+}
+
+.container-fluid {
+  width: 94%;
+  margin: 0px auto;
+  max-width: 94%;
+  orphans: 1;
+  widows: 1;
+}
+
+.bth {
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  padding: 0;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.bth nav {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  padding-left: 20px;
+}
+
+.bth nav a {
+  text-decoration: none;
+  color: #444;
+  background-color: #d5d5d5;
+  padding: 5px 10px;
+  border-radius: 20px;
+  width: max-content;
+  height: max-content;
+}
+
+.bth nav a:hover {
+  color: #f4f4f4;
+  background-color: #878787;
+}
+
+.content .bth h1 {
+  text-align: center;
+  color: #cecece;
+  font-size: 50px;
+  height: 50%;
+}
+
+.frame {
+  width: 100%;
+  margin-right: 40px;
+  float: left;
+  display: block;
+}
+
+.row {
+  margin: 5px;
+}
+
+
+.card {
+  width: 100%;
+  margin: 10px;
+  display: flex;
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(0px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover img {
+  opacity: 0.7;
+}
+
+.card .info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: #fff;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.card:hover .info {
+  transform: translateY(0);
+}
+
+.card .info h5 {
+  margin: 0;
+  font-size: 22px;
+  color: #FFFFFF;
+}
+
+.card .info p {
+  margin: 5px 0 0;
+  font-size: 13px;
+}
+
+.middle-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 75px;
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.5);
+  /* Adding shadow */
+  opacity: 1;
+  /* Initially visible */
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .middle-content {
+  opacity: 0;
+  /* Hides the text on hover */
+}
+
+.arrow-box {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.arrow-box img {
+  width: 50px;
+  height: 50px;
+}
+
+.arrow-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon">
+    <title>Gallery</title>
+</head>
+
+<body>
+    <div class="content">
+        <header class="bth">
+            <nav>
+                <a href="https://buddiestourlines.com/#gallery"><img src="/static/images/arrow.png" alt="Back To Home" style="height: 40px; width:40px;"></a>
+            </nav>
+            <h1>Gallery Heading</h1>
+      </header><br>
+        <style>
+          body{
+    background-color: #333;
+}
+.bth{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.bth nav{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    padding-left: 20px;
+}
+.bth nav a{
+    text-decoration: none;
+    color: #444;
+    background-color: #d5d5d5;
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: max-content;
+    height: max-content;
+}
+.bth nav a:hover{
+    color: #f4f4f4;
+    background-color: #878787;
+}
+.content .bth h1{
+    text-align: center;
+    color: #cecece;
+    font-size: 50px;
+    height: 50%;
+
+}
+@media screen and (max-width:780px){
+    div.content{
+        height: 400vh !important;
+    }
+    .content .bth{
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column-reverse !important;
+        height: 5% !important;
+    }
+    .bth nav{
+        width: 100% !important;
+        height: 50% !important;
+    }
+    .bth h1{
+        width: 100% !important;
+        height: 50% !important;
+          font-size:20px !important;
+          margin-top:10px;
+    }
+    .footer {
+        width: 100% !important;
+        height: 30vh !important; }
+        .footer footer {
+          flex-direction: column !important; }
+          .footer footer .foot-div {
+            width: 100% !important;
+            height: 30% !important;
+            display: flex;
+            justify-content: center;
+            align-items: center; } }
+          div.galleryz {
+            border: 1px solid #ccc;
+          }
+          .footer {
+    width: 100vw;
+    height: 5vh;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #0a0d36;
+    color: white; }
+    .footer footer {
+      margin: auto;
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .footer footer .foot-div {
+        width: 33.3%;
+        align-self: center;
+        text-align: center; }
+  .galleryz{
+    background-color: white;
+  }
+          div.galleryz:hover {
+            border: 1px solid #777;
+          }
+          
+          div.galleryz img {
+            width: 100%;
+            height: auto;
+          }
+          
+          div.descz {
+            padding: 15px;
+            text-align: center;
+          }
+          
+          * {
+            box-sizing: border-box;
+          }
+          
+          .responsivez {
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%;
+          }
+          
+          @media only screen and (max-width: 700px) {
+            .responsivez {
+              width: 49.99999%;
+              margin: 6px 0;
+            }
+          }
+          
+          @media only screen and (max-width: 500px) {
+            .responsivez {
+              width: 100%;
+            }
+          }
+          
+          .cleafixz:after {
+            content: "";
+            display: table;
+            clear: both;
+          }
+          </style>
+          <hr>
+          <div class="responsivez">
+            <div class="galleryz">
+              <a target="_blank" href="img_5terre.jpg">
+                <img src="https://www.w3schools.com/howto/img_nature.jpg" alt="Cinque Terre" width="600" height="400">
+              </a>
+              <div class="descz">Image Description</div>
+            </div>
+          </div>
+          
+          
+          <div class="responsivez">
+            <div class="galleryz">
+              <a target="_blank" href="img_forest.jpg">
+                <img src="https://www.w3schools.com/howto/img_nature.jpg" alt="Forest" width="600" height="400">
+              </a>
+              <div class="descz">Image Description</div>
+            </div>
+          </div>
+          
+          <div class="responsivez">
+            <div class="galleryz">
+              <a target="_blank" href="img_lights.jpg">
+                <img src="https://www.w3schools.com/howto/img_nature.jpg" alt="Northern Lights" width="600" height="400">
+              </a>
+              <div class="descz">Image Description</div>
+            </div>
+          </div>
+          
+          <div class="responsivez">
+            <div class="galleryz">
+              <a target="_blank" href="img_mountains.jpg">
+                <img src="https://www.w3schools.com/howto/img_nature.jpg" alt="Mountains" width="600" height="400">
+              </a>
+              <div class="descz">Image Description</div>
+            </div>
+          </div>
+                    
+          <div class="responsivez">
+            <div class="galleryz">
+              <a target="_blank" href="img_forest.jpg">
+                <img src="https://www.w3schools.com/howto/img_nature.jpg" alt="Forest" width="600" height="400">
+              </a>
+              <div class="descz">Image Description</div>
+            </div>
+          </div>
+          </div>
+          <div class="cleafixz"></div>
+</body>
+
+</html>

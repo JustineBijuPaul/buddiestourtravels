@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Css -->
+      <!--  Google Fonts Css -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+      
+      <!-- End Google Fonts Css -->
+      <!-- <link rel="stylesheet" href="/static/css/style.css" /> -->
+      <link rel="stylesheet" href="/static/css/dist/css/style.css">
+      <link rel="stylesheet" href="/static/css/dist/css/mobile.css">
+    <!-- End Css -->
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon" />
+    {% block head %}
+    <script src="{% static 'js/main.js' %}"></script>
+    {% endblock head %}
+    <title>Buddies Tourlines</title>
+    <style>
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+        padding-left:20px !important;
+      }
+      
+      .switch input { 
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+      }
+      
+      input:checked + .slider {
+        background-color: #111;
+      }
+      
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196F3;
+      }
+      
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+      
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+      
+      .slider.round:before {
+        border-radius: 50%;
+      }
+      </style>
+  </head>
+  <body style="background-color:black;">
+    <div class="autoimages">
+      <div class="showcase" style="background-color:rgba(0,0,0,.5)">
+        <div class="navbar" id="navbar">
+          <nav>
+            <div class="mobilebar">
+              <div class="fa-bar" id="fa-bar" onclick="myFunction(this)">
+                  <div class="bar bar1"></div>
+                  <div class="bar bar2"></div>
+                  <div class="bar bar3"></div>
+              </div>
+            </div>
+            <div class="brand">
+              <div class="logo" style="overflow: hidden;"><img src="/static/images/logo.png" alt="" srcset=""></div>
+              <div class="title">
+                <h1 style="background: linear-gradient(to right, #ff4502,
+                      #ff0032, #c0008f, #6c00c0);
+              -webkit-text-fill-color: transparent;
+              -webkit-background-clip: text; overflow:none;"><b><a href="">BUDDIES TOURLINES</a></b></h1>
+              </div>
+            </div>
+            <ul id="links" style="color:black;">
+              <li><a href="#links" onclick="myFunctionHide()">Home</a></li>
+              <li><a href="#aboutus" onclick="myFunctionHide()">About</a></li>
+              <li><a href="#services" onclick="myFunctionHide()">Packages</a></li>
+              <li><a href="#gallery" onclick="myFunctionHide()">Gallery</a></li>
+              <li><a href="#contact" onclick="myFunctionHide()">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+        {% block showcase %}{% endblock showcase %}
+      </div>
+    </div>
+     {% block aboutus %}{% endblock aboutus %}
+     {% block packages %}{% endblock packages %}
+     {% block gallery %}{% endblock gallery %}
+     {% block contact %}{% endblock contact %}
+     {% block footer %}{% endblock footer %}
+     <script src="/static/js/main.js"></script>
+  <script type="text/javascript">
+    function myFunction(x) {
+      x.classList.toggle("change");
+      if(document.getElementById("links").style.left == "0%"){
+        document.getElementById("links").style.setProperty('left','-150%','important');
+      }else{
+        document.getElementById("links").style.setProperty('left','0%','important');
+      }
+    }      
+    function myFunctionHide(){
+      document.getElementById("links").style.setProperty('left','-150%','important');
+      document.getElementById("fa-bar").classList.toggle("change");
+    }
+
+
+  </script>
+</body>
+</html>

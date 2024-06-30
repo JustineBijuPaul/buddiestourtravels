@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="../../static/css/gallerycss/gallarypage.css">
+</head>
+
+<body>
+  <div class="brand">
+    <div class="logo">
+      <img style="width: 100px; height: 100px" src="/static/images/logo.png" alt="" srcset="">
+    </div>
+    <div class="title">
+      <h1>
+        <b>
+          <a href="">BUDDIES TOURLINES</a>
+        </b>
+      </h1>
+    </div>
+  </div>
+  <div style="border: 1px solid black;"></div>
+  <div class="content">
+    <header class="bth gallery" id="mainframe">
+      <nav class="container-fluid row">
+        <a href="https://buddiestourlines.com/#gallery"><img src="/static/images/arrow.png" alt="Back To Home"
+            style="height: 40px; width:40px;"></a>
+        <div class="gallery-filter">
+          <span class="filter-item active" data-filter="all">all</span>
+          <!--{% for item in gallery %}
+              <span class="filter-item" data-filter="{{ item.name }}">{{ item.name }}</span>
+              {% endfor %} -->
+          <span class="filter-item" data-filter="Munnar">Munnar</span>
+          <span class="filter-item" data-filter="Banglore">Banglore</span>
+          <span class="filter-item" data-filter="Wayanad">Wayanad</span>
+          <span class="filter-item" data-filter="Chikmagalur">Chikmagalur</span>
+          <span class="filter-item" data-filter="Goa">Goa</span>
+          <span class="filter-item" data-filter="Hampi">Hampi</span>
+          <span class="filter-item" data-filter="Coorg">Coorg</span>
+          <span class="filter-item" data-filter="Hyderabad">Hyderabad</span>
+          <span class="filter-item" data-filter="Malpe">Malpe</span>
+          <span class="filter-item" data-filter="Mysore">Mysore</span>
+          <span class="filter-item" data-filter="Ooty">Ooty</span>
+          <span class="filter-item" data-filter="Uduppi">Uduppi</span>
+          <span class="filter-item" data-filter="Vagamon">Vagamon</span>
+        </div>
+  </div>
+  </nav>
+  </header>
+  <div style="border: 1px solid black;"></div>
+  <section>
+    <div class="frame">
+      <div class="container">
+
+        {% for item in gallery %}
+        <div class="row gallery-item">
+          <div class="card">
+            <img src="{{ item.image.url | default:'https://i.ibb.co/drLr7vm/LOGOLAST-1.png' }}">
+            <div class="info">
+              <h5>{{ item.name }}</h5>
+              <p>{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+  <script>
+    const filterContainer = document.querySelector(".gallery-filter"),
+      galleryItems = document.querySelectorAll(".gallery-item");
+
+    filterContainer.addEventListener("click", (event) => {
+      if (event.target.classList.contains("filter-item")) {
+        // deactivate existing active 'filter-item'
+        filterContainer.querySelector(".active").classList.remove("active");
+        // activate new 'filter-item'
+        event.target.classList.add("active");
+        const filterValue = event.target.getAttribute("data-filter");
+        galleryItems.forEach((item) => {
+          if (item.classList.contains(filterValue) || filterValue === 'all') {
+            item.classList.remove("hide");
+            item.classList.add("show");
+          }
+          else {
+            item.classList.remove("show");
+            item.classList.add("hide");
+          }
+        });
+      }
+    });
+  </script>
+</body>
+
+</html>

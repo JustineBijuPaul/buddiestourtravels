@@ -1,0 +1,1 @@
+from buddiestourlines.wsgi import application

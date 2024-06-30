@@ -1,0 +1,161 @@
+@media screen and (max-width: 780px) {
+  .showcase .navbar {
+    display: flex;
+    width: 100%;
+    height: 15%;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    transition: top .5s;
+    z-index: 4;
+  }
+  .showcase nav{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    background-color: #ffffffac;
+  }
+  .showcase nav .mobilebar {
+    position: fixed;
+    display: flex;
+    align-items: flex-end;
+    width: 10vw;
+    height: 10vh;
+    top: 0;
+    left: 0;
+    z-index: 10; }
+    .showcase nav .mobilebar .fa-bar {
+      padding-left: 5px;
+      display: block;
+      width: 100%;
+      display: flex;
+      flex-direction: column !important;
+      align-items: center;
+      justify-content: center; }
+      .showcase nav .mobilebar .fa-bar .bar {
+        width: 30px;
+        height: 5px;
+        margin-bottom: 3px;
+        background-color: black;
+        border-radius: 3px;
+        transition: all 800ms; }
+    .showcase nav .mobilebar .change .bar1 {
+      transform: translate(0, 11px) rotate(-45deg); }
+    .showcase nav .mobilebar .change .bar2 {
+      opacity: 0; }
+    .showcase nav .mobilebar .change .bar3 {
+      transform: translate(0, -5px) rotate(45deg); }
+  .showcase nav .brand {
+    position: fixed;
+    right: 0 !important;
+    width: 90vw !important;
+    height: 10vh !important; }
+  .showcase nav ul {
+    display: block !important;
+    position: fixed;
+    background-color: #222;
+    color: #f4f4f4;
+    flex-direction: column !important;
+    z-index: 4;
+    width: 100vw !important;
+    height: 100vh !important;
+    left: -150% !important;
+    right: 0;
+    bottom: 0;
+    transition: left .3s; }
+    .showcase nav ul li {
+      width: 100% !important;
+      height: 20% !important;
+      display: flex;
+      flex-direction: row !important;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #4e4e4e; }
+  .showcase .content-home {
+    margin-top: 250px !important; }
+    .showcase .content-home h1 {
+      font-size: 3.5rem !important; }
+    .showcase .content-home .para-txt .item-1, .showcase .content-home .para-txt .item-2, .showcase .content-home .para-txt .item-3 {
+      font-size: 2rem !important;
+      width: 50% !important; }
+  .aboutus .aboutus-details {
+    flex-direction: column-reverse !important; }
+    .aboutus .aboutus-details .article1 {
+      width: 100% !important;
+      height: 50% !important; }
+      .aboutus .aboutus-details .article1 p {
+        margin: 15px !important;
+        font-size: 16px !important;
+        padding: 10px !important;
+        height: max-content !important; }
+    .aboutus .aboutus-details .article2 {
+      display: none !important; }
+    .aboutus .aboutus-details .article3 {
+      width: 100% !important;
+      height: 50% !important; }
+  .services {
+    height: 340vh !important; }
+    .services .services-heading {
+      height: 10% !important; }
+    .services .services-container {
+      flex-direction: column !important;
+      height: 90% !important;
+      /* <!-- flex-wrap: nowrap !important; --> */
+    }
+      .services .services-container .group {
+        width: 90% !important;
+        height: 12% !important;
+        flex: none !important;
+        margin-bottom: 20px !important; } 
+  .gallery {
+    height: 200vh !important; }
+    .gallery .gallery-heading {
+      height: 10% !important; }
+    .gallery .gallery-container {
+      flex-direction: column !important;
+      height: 90% !important; }
+      .gallery .gallery-container .galleryp {
+        width: 90% !important;
+        height: 40% !important;
+        margin-bottom: 20px !important; }
+  .contact {
+    height: 170vh !important; }
+    .contact .contact-heading {
+      height: 10% !important; }
+    .contact .contact-container {
+      flex-direction: column-reverse !important;
+      height: 90% !important; }
+      .contact .contact-container .address {
+        width: 100% !important;
+        height: 50% !important;
+        margin-bottom: 20px !important;
+        padding: 15rem 0 0 .5rem !important; }
+      .contact .contact-container .reply {
+        width: 100% !important;
+        height: 50% !important; }
+        .contact .contact-container .reply h2 {
+          font-size: 30px !important;
+          height: 15% !important; }
+        .contact .contact-container .reply .replyio {
+          width: 80% !important;
+          height: 85% !important; }
+  .footer {
+    width: 100% !important;
+    height: 30vh !important; }
+    .footer footer {
+      flex-direction: column !important; }
+      .footer footer .foot-div {
+        width: 100% !important;
+        height: 30% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center; } }
+
+@media screen and (max-width: 380px) {
+  .showcase .navbar nav .brand .title h1 a {
+    font-size: 25px !important; }
+  .showcase .content-home .quote h1 {
+    font-size: 2.5rem !important; } }

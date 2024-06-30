@@ -1,0 +1,253 @@
+{% extends 'base.html' %} {% block showcase %}
+<div class="content-home">
+  <div class="quote">
+    <h1 style="color: white; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Keep Travelling</h1>
+  </div>
+  <div class="para-txt">
+    <p class="item-1">
+      “Travel makes one modest, you see what a tiny place you occupy in the world.”
+    </p>
+    <p class="item-2">
+      “Travel is the only thing you buy that makes you richer"
+    </p>
+    <p class="item-3">
+      “It feels good to be lost in the right direction”
+    </p>
+  </div>
+</div>
+{% endblock showcase %} {% block aboutus %}
+<div class="aboutus" id="aboutus">
+  <section class="sectionabout">
+    <div class="divabout">
+      <div class="aboutus-heading">
+        <h1>ABOUT US</h1>
+      </div>
+      <div class="aboutus-details">
+        <article class="article1">
+          <p>
+            Happiness is all about the way of travel, not just the destination. We, <b>Buddies Tourlines</b>, offer you such an enriching and fulfilling experience which creates beautiful, evergreen moments to cherish forever.
+            A joint venture with ONENESS TRAVELS, one of the finest and best travels in Kerala, Buddies Tourlines is an initiative of a few young, dynamic hearts with passion for travelling. Buddies don't end  with  the  trip that you undertake; it’s  a  lifelong  relationship  that we share with our clients who help us to become better through their feedback and suggestions.
+            We promise you the best of our service as we have been doing in the past few years. Come let’s see the world.......
+          </p>
+        </article>
+        <article class="article2">
+          <div class="line"></div>
+        </article>
+        <article class="article3">
+          <img src="https://buddiestourlines.com/static/images/about-final.png" alt="" />
+        </article>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock aboutus %} {% block packages %}
+<div class="services" id="services">
+  <section>
+    <div class="services-heading">
+      <h1>PACKAGES</h1>
+    </div>
+    <!-- <div class="services-container">
+      <div class="group division1">
+        <img src="{{ p.image_url|default:'https://i.ibb.co/drLr7vm/LOGOLAST-1.png' }}" alt="" />
+        <h2>1 Day Packages</h2>
+        <div>
+          <a href="p1">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="group division2">
+        <img src="{{ p.image_url|default:'https://i.ibb.co/drLr7vm/LOGOLAST-1.png' }}" alt="" />
+        <h2>2 Day Pacages</h2>
+        <div>
+          <a href="p2">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="group division3">
+        <img src="{{ p.image_url|default:'https://i.ibb.co/drLr7vm/LOGOLAST-1.png' }}" alt="" />
+        <h2>3 Day Packages</h2>
+        <div>
+          <a href="p3">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="group division4">
+        <img src="{{ p.image_url|default:'https://i.ibb.co/drLr7vm/LOGOLAST-1.png' }}" alt="" />
+        <h2>4 Day Packages</h2>
+        <div>
+          <a href="p4">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="group division5">
+        <img src="/static/images/packages/tajmahal.jpg" alt="" />
+        <h2>5 Day Packages</h2>
+        <div>
+          <a href="p5">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="group division6">
+        <img src="/static/images/packages/kashmir.jpg" alt="" />
+        <h2>6 Day Packages</h2>
+        <div>
+          <a href="p6">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="group division7">
+        <img src="/static/images/packages/delhi.jpg" alt="" />
+        <h2>7 Day Packages</h2>
+        <div>
+          <a href="p7">BOOK NOW</a>
+        </div>
+      </div>
+      <div class="group division8">
+        <img src="/static/images/packages/alappuzha.jpg" alt="" />
+        <h2>8 Day Packages</h2>
+        <div>
+          <a href="p8">BOOK NOW</a>
+        </div>
+      </div>
+    </div> -->
+ <div class="services-container">
+      {% for p in packages %}
+          <div class="group division{{ forloop.counter }}">
+            <img src="{{ p.image_url|default:'https://i.ibb.co/drLr7vm/LOGOLAST-1.png' }}" alt="{{ p.title }}" />
+            <h2>{{ p.title }}</h2>
+            <div>
+              <a href="/package/{{ p.slug }}">BOOK NOW</a>
+            </div>
+          </div> 
+      {% endfor %}
+    </div>
+  </section>
+</div>
+{% endblock packages %} {% block gallery %}
+<div class="gallery" id="gallery">
+  <section class="gallery-section">
+    <div class="gallery-heading">
+      <h1>GALLERY</h1>
+    </div>
+    <div class="gallery-container">
+      <div class="galleryp" onmouseover="view(1)" onmouseout="viewout(1)">
+        <img src="/static/images/coorg/coorg1.jpeg" alt="" id="gallery1" />
+        <a href="/gallery1" id="btn1">Explore</a>
+      </div>
+      <div class="galleryp" onmouseover="view(2)" onmouseout="viewout(2)">
+        <img src="/static/images/gallery/eagle.jpg" alt="" id="gallery2" />
+        <a href="/gallery2" id="btn2">Explore</a>
+      </div>
+      <div class="galleryp" onmouseover="view(3)" onmouseout="viewout(3)">
+        <img src="/static/images/gallery/wayand.jpg" alt="" id="gallery3" />
+        <a href="/gallery3" id="btn3">Explore</a>
+      </div>
+      <div class="galleryp" onmouseover="view(4)" onmouseout="viewout(4)">
+        <img src="/static/images/gallery/munnar.jpg" alt="" id="gallery4" />
+        <a href="/gallery4" id="btn4">Explore</a>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  function view(x) {
+    document.getElementById("gallery" + x).style.opacity = "0.4";
+    document.getElementById("btn" + x).style.display = "block";
+  }
+  function viewout(x) {
+    document.getElementById("gallery" + x).style.opacity = "1";
+    document.getElementById("btn" + x).style.display = "none";
+  }
+</script>
+{% endblock gallery %} {% block contact %}
+<div class="contact" id="contact">
+  <section class="contact-section">
+    <div class="contact-heading">
+      <h1>CONTACT US</h1>
+    </div>
+    <div class="contact-container">
+      <div class="address">
+        <i>
+          Kottarakkara,<br />
+          Kollam (Quilon),<br />
+          India, Kerala <br />
+          Contact : <br />
+          <a href="tel:09946681104" style="text-decoration: none">
+          099466 81104
+        </a>
+          <br />
+          Email : <br />
+          <a
+            href="mailto:buddiestourlines@gmail.com"
+            style="text-decoration: none"
+            >buddiestourlines@gmail.com</a
+          >
+        </i>
+      </div>
+      <div class="reply">
+        <h2>Leave a Reply</h2>
+        <div class="replyio">
+          <form method="post" action="/index" id="reply-form">
+            {% csrf_token %}
+            <label for="name">Name <span style="color: red">*</span></label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              style="text-transform: capitalize"
+              required
+            />
+            <label for="email">Email <span style="color: red">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              style="text-transform: lowercase"
+              required
+            />
+            <label for="phone"
+              >Mobile No. <span style="color: red">*</span></label
+            >
+            <input type="text" id="phone" name="phone" required />
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <button>
+              <input
+                type="submit"
+                value="Submit"
+                style="width: 100%; height: 100%; border: none"
+              />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+  function submit(x) {
+    var stylebtn = x.style;
+    stylebtn.border = "none";
+    stylebtn.backgroundColor = "transparent";
+    stylebtn.color = "#f4f4f4";
+    x.innerHTML = "Submitted";
+    x.onclick= 'null';
+  }
+</script>
+{% endblock contact %} 
+{% block footer %}
+
+<div class="footer">
+  <footer>
+    <div class="bt foot-div">
+      &copy;Copyright Buddies Tourlines All Rights Reserved
+    </div>
+    <div class="cpy foot-div">
+      <a>Terms and Condition</a>
+    </div>
+    <div class="developer foot-div">
+      Designed by -- LOVELACE&trade;
+    </div>
+  </footer>
+</div>
+{% endblock footer %}
+
